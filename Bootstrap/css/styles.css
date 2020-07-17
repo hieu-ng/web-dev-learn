@@ -24,7 +24,7 @@ p {
 
 /* Title */
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 
 .navbar {
@@ -56,6 +56,8 @@ p {
 .title-image {
   width: 60%;
   transform: rotate(10deg);
+  position:absolute;
+  right: 30%;
 }
 
 /* Download Button */
@@ -65,9 +67,11 @@ p {
 
 /* Features */
 
-/* #features {
-  padding: 7% ;
-} */
+#features {
+  /* padding: 7% 15%; */
+  background-color: #fff;
+  position: relative;
+}
 
 .feature-img {
   margin: 1rem;
@@ -81,7 +85,7 @@ p {
 
 /* Testimonial */
 #testimonials {
-  padding: 7% 15%;
+
   text-align: center;
   background-color: #ef8172;
   color: #fff;
@@ -93,6 +97,11 @@ p {
   margin: 20px;
 }
 
+.carousel-item {
+  padding: 7% 15%;
+}
+
+
 #press {
   text-align: center;
   background-color: #ef8172;
@@ -102,4 +111,16 @@ p {
 .press-img {
   width: 15%;
   margin: 20px 20px 50px;
+}
+
+
+/* Pricing */
+
+#pricing {
+  padding: 100px;
+  text-align: center;
+}
+
+.price-col {
+  padding: 3% 2%;
 }
