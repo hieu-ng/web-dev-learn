@@ -1,29 +1,45 @@
-/* Global */
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 900;
-  line-height: 1.5;
+/* Headings */
+
+body {
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
 }
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+.section-heading {
+  font-size: 3rem;
   line-height: 1.5;
-}
-
-h3 {
-  font-family: 'Montserrat', sans-serif;
-  /* font-size: 1.5rem; */
-  font-weight: bold;
 }
 
 p {
   color: #8f8f8f;
 }
 
-/* Title */
 .container-fluid {
+  padding: 7% 15%;
+}
+
+.white-section{
+background-color: #fff;
+}
+
+.color-section{
+
+    background-color: #ef8172;
+
+}
+
+/* Title */
+
+.big-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+#title .container-fluid {
   padding: 3% 15% 7%;
 }
 
@@ -48,9 +64,10 @@ p {
 }
 
 #title {
-  background-color: #ff4c68;
-
+  text-align: left;
   color: #fff;
+
+  background-color: #ff4c68;
 }
 
 .title-image {
@@ -58,6 +75,16 @@ p {
   transform: rotate(10deg);
   position:absolute;
   right: 30%;
+}
+
+@media (max-width:1028px) {
+  #title {
+    text-align: center;
+  }
+  .title-image {
+    position:static;
+    transform: rotate(0);
+  }
 }
 
 /* Download Button */
@@ -68,8 +95,6 @@ p {
 /* Features */
 
 #features {
-  /* padding: 7% 15%; */
-  background-color: #fff;
   position: relative;
 }
 
@@ -85,10 +110,12 @@ p {
 
 /* Testimonial */
 #testimonials {
-
-  text-align: center;
-  background-color: #ef8172;
   color: #fff;
+}
+
+.testimonial-text {
+  font-size: 2rem;
+    line-height: 1.5;
 }
 
 .test-img {
@@ -97,14 +124,7 @@ p {
   margin: 20px;
 }
 
-.carousel-item {
-  padding: 7% 15%;
-}
-
-
 #press {
-  text-align: center;
-  background-color: #ef8172;
   padding-bottom: 3%;
 }
 
@@ -118,9 +138,35 @@ p {
 
 #pricing {
   padding: 100px;
-  text-align: center;
 }
 
 .price-col {
   padding: 3% 2%;
+}
+
+.price-text {
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+/* CTA */
+
+#cta {
+  padding-top: 5%;
+  background-color: #ff4c68;
+}
+
+.cta-text {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* footer */
+
+#footer {
+  padding: 5% 15%;
+}
+
+.footer-icon {
+  margin: 1%;
 }
