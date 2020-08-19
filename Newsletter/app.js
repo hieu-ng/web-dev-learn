@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -15,6 +16,7 @@ app.post("/", function(req, res) {
   var lastName = req.body.lName;
   var email = req.body.email;
 
+
   var data = {
     members: [
       {
@@ -27,7 +29,7 @@ app.post("/", function(req, res) {
       }
     ]
   };
-
+  
   var jsonData = JSON.stringify(data);
 
   var options = {
@@ -37,7 +39,7 @@ app.post("/", function(req, res) {
       "Authorization": "hieu 5e354467ba09ec783f32eaa59c70590a-us17"
     },
     // body: jsonData
-  }
+  };
   request(options, function(error, response, body){
     if (error) {
       res.sendFile(__dirname + "/failure.html");
@@ -56,9 +58,9 @@ app.post("/failure", function(req, res) {
 });
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 5500, function(){
   console.log('Server 3000');
-})
+});
 
 
 // 5e354467ba09ec783f32eaa59c70590a-us17
