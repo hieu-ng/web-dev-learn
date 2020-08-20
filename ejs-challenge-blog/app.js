@@ -3,7 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const { get } = require("lodash");
+const _ = require("lodash");
 
 const homeStartingContent = "This is home";
 const aboutContent = "This is about";
@@ -42,6 +42,17 @@ app.post('/compose', (req,res) => {
   posts.push(post);
   res.redirect('/');
 });
+
+app.get('/posts/:postTitle', (req, res) => {
+  posts.forEach((i) => {
+    if(_.lowerCase(i.title) === _.lowerCase(req.params.postTitle)) {
+      res.render('post', {postTitle: i.title, postBody: i.body});
+    } else {
+      console.log('error');
+    }
+  });
+});
+
 
 
 

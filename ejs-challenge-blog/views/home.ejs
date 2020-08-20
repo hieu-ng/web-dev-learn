@@ -1,8 +1,13 @@
-<%- include('partials/header'); -%> 
+<%- include('partials/header'); -%>
 <h1> <%= pageTitle %> </h1>
 
 <p><%= pageSummary %> </p>
-<p><%= myPosts %> </p>
-<% console.log(myPosts) %> 
+<a class="btn btn-primary" href="/compose" role="button">Compose New Post</a>
+<% myPosts.forEach((i) => { %>
+<h2><%= i.title %></h2>
+<p>
+    <%= i.body.substring(0, 3) + '...'%>
+    <a href="<%= '/posts/' + i.title%> ">Read More</a>
+</p>
+<% }); %>
 <%- include('partials/footer'); -%>
-
